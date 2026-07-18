@@ -9,8 +9,6 @@ const Login = ({ setToken }) => {
     const [password, setPassword] = useState('');
 
     const handleSubmit = async (e) => {
-        setToken("token");
-        return;
         try {
             e.preventDefault();
             const res = await axios.post(backendURL + '/api/users/admin', {email, password});
